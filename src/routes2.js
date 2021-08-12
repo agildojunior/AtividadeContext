@@ -27,7 +27,6 @@ function parte1StackScreen() {
   )
 }
 
-
 function parte2StackScreen() {
   return(
     <SuperiorStack.Navigator>

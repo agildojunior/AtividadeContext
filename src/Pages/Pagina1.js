@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import { Text, View,StyleSheet } from 'react-native';
-
+import SimplesContext from '../../contexts/SimplesProvider';
 
 export function Pagina1(){
+    const {user} = useContext(SimplesContext);
     return(
+        
         <View style={ styles.container}>
             <View style={styles.containerif}><Text style={styles.letrabranca}>Sobre o Campus</Text></View>
             <View style={ styles.containerletras}><Text>--------------- IFRN PAU DOS FERROS ---------------</Text><Text>      O Campus Pau dos Ferros - IFRN oferece cursos de educação superior, pós-graduação e educação profissional técnica de nível médio.</Text></View>
-            
+            <Text> {user} </Text>
         </View>
     )
 }

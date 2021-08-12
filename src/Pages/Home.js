@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
 import { Text, View , StyleSheet } from 'react-native';
 import { MainButton } from '../components/botao';
-
+import React, { useContext } from 'react';
+import SimplesContext from '../../contexts/SimplesProvider';
 
 export function Home( { navigation} ){
+    const {user} = useContext(SimplesContext);
+
     return(
 
         <View style={ styles.container}>
             <View style={styles.containerif}><Text style={styles.letrabranca}>IFRN</Text></View>
+
+            <Text> {user} </Text>
 
             <MainButton title="Sobre o Campus" onPress={() => navigation.navigate('Pagina1')} />
             <MainButton title="Últimas notícias" onPress={() => navigation.navigate('Pagina2')} />
